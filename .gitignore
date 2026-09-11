@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+.claude/
+cdp-check.mjs
+cdp-check2.mjs
+cdp-shot.mjs
+shot-desktop-*.png
+shot-mobile-*.png
+20260829_094503.jpg.jpeg
