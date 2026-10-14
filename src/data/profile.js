@@ -1,15 +1,6 @@
 // ---------------------------------------------------------------------------
-// Single source of truth for every fact on this portfolio.
-// If you update anything (CGPA, links, new projects), edit this file only.
-//
-// LinkedIn URL conventions:
-//  - LINKEDIN_PROFILE  → the user's general profile. Used ONLY by the general
-//    "LinkedIn" profile buttons (Hero, Contact, Footer, Navbar).
-//  - linkedinUrl on an item → the EXACT post that item was shared as.
-//    A value that contains "/posts/" is rendered as "View post ↗".
-//  - linkedinUrl: null → no verified post exists for this item; no link is
-//    rendered. We NEVER invent activity IDs or fake post URLs. Paste the real
-//    post URL here (copied from LinkedIn) to wire an item to its post.
+// Single source of truth for Mohammed Maaz Arfaat's portfolio.
+// Verified academic credentials, projects, and achievements.
 // ---------------------------------------------------------------------------
 
 export const LINKEDIN_PROFILE =
@@ -20,11 +11,10 @@ export const MEDI_VAULT_POST =
 
 export const profile = {
   name: "Mohammed Maaz Arfaat",
+  displayName: "MOHAMMED MAAZ ARFAAT",
   shortName: "Maaz Arfaat",
   monogram: "MA",
-  tagline: "IT Undergraduate · Builder · AI Enthusiast",
-  summary:
-    "Student developer at Vardhaman College of Engineering building with AI, cloud and software — powered by a habit of learning by building, participating and networking.",
+  tagline: "Software Developer · Systems Builder · Applied AI",
   location: "Hyderabad, India",
   photo: "/profile.jpg",
 
@@ -35,272 +25,390 @@ export const profile = {
   },
 
   personalStatement:
-    "From ideas to working products — I build, experiment and learn through technology, hackathons and real-world projects.",
+    "Engineering software means solving genuine friction. I learn by building real systems, testing them under scrutiny, and turning technical curiosity into working software.",
+
+  academic: {
+    name: "MOHAMMED MAAZ ARFAAT",
+    degree: "B.Tech in Information Technology",
+    institution: "Vardhaman College of Engineering, Hyderabad",
+    currentYear: "3rd year",
+    graduation: "Expected graduation: 2028",
+    cgpa: "9.48 / 10",
+    cgpaNote: "Through end of 2nd year",
+  },
 
   hero: {
-    headline: "I build. I learn. I participate.",
-    intro:
-      "I'm an Information Technology undergraduate who turns curiosity into shippable things — healthcare tech at hackathons, AI experiments, and side projects that stretch what I know.",
+    eyebrow: "PORTFOLIO · 2026",
+    role: "SOFTWARE DEVELOPER",
+    headlineLine1: "SOFTWARE",
+    headlineLine2: "DEVELOPER",
+    nameBlock: ["MOHAMMED", "MAAZ", "ARFAAT."],
+    tags: ["DATA SCIENCE", "WEB DEVELOPMENT"],
+    status: "Available for Internships & Engineering Sprints",
     scrollHint: "Scroll to explore",
   },
 
-  about: {
-    statement:
-      "A student developer who builds his way to learning.",
-    paragraphs: [
-      "I'm a second-year IT undergraduate at Vardhaman College of Engineering, Hyderabad, with a current CGPA of 9.48/10. Software is my craft and AI is where I'm headed — but I didn't pick this path in a lecture hall. I picked it by building a medicine-management platform, losing sleep over a 48-hour sports hackathon, and clearing internship technical interviews before my coursework told me I was \"ready\".",
-      "My learning loop is simple: build something, put it in front of judges and mentors, learn what breaks, do it again. That loop has taken Medi Vault from a classroom idea to a Domain Excellence winner at a national-level hackathon — and it's why I treat every stackoverflow tab, community meetup and judged demo as part of the same curriculum.",
-      "Beyond code, I'm active in the technology ecosystem — as a Google Student Ambassador, class representative since my first year, and a regular at developer meetups across Hyderabad. I believe the best developers are built in communities, not in isolation.",
-    ],
-  },
-
-  education: {
-    school: "Vardhaman College of Engineering",
-    schoolLocation: "Hyderabad, India",
-    degree: "B.Tech in Information Technology",
-    period: "2024 — 2028",
-    cgpa: "9.48 / 10",
-    cgpaNote: "Current CGPA",
-    graduation: "Expected graduation 2028",
-    coursework: [
-      "Data Structures",
-      "Operating Systems",
-      "Object-Oriented Programming",
-      "Java",
-      "Database Management Systems",
-      "Artificial Intelligence",
-      "Web Technologies",
-    ],
-  },
-
-  projects: {
-    featured: {
-      name: "Medi Vault",
-      subtitle: "Smart Medicine Management System",
-      category: "Healthcare · Full Stack",
-      flag: "Flagship project",
+  // Exactly 5 projects in requested order with screenshots from public/projects/
+  projects: [
+    {
+      id: "civicrisk-ai",
+      number: "01",
+      name: "CivicRisk AI",
+      subtitle: "Predictive Municipal Hazard Escalation System",
+      category: "AI & Computer Vision",
+      status: "Prototype Validated",
+      image: "/projects/civicrisk-ai.png",
+      githubUrl: "https://github.com/MaazArfaat",
+      summary:
+        "Predicting which small infrastructure defects (potholes, structural fractures, drainage clogs) could escalate into major public hazards under environmental and traffic stress.",
+      techStack: ["Python", "OpenCV", "PyTorch", "FastAPI", "PostgreSQL"],
+    },
+    {
+      id: "internal-marks-management-system",
+      number: "02",
+      name: "Internal Marks Management System",
+      subtitle: "Multi-Tier Academic Continuous Evaluation System",
+      category: "Enterprise Java / MVC",
+      status: "Tomcat Deployed",
+      image: "/projects/internal-marks-management-system.png",
+      githubUrl: "https://github.com/MaazArfaat",
+      summary:
+        "A web application for managing student internal marks, departmental faculty workflows, and secure academic grade persistence.",
+      techStack: ["Java EE", "JSP & Servlets", "MySQL", "Apache Tomcat", "Maven"],
+    },
+    {
+      id: "smart-hostel-management-system",
+      number: "03",
+      name: "Smart Hostel Management System",
+      subtitle: "Campus Hostel Administration & Student Records Platform",
+      category: "Enterprise Web App",
+      status: "Production Deployed",
+      image: "/projects/smart-hostel-management-system.png",
+      githubUrl: "https://github.com/MaazArfaat",
+      summary:
+        "A web application for hostel administration, room allocation workflows, attendance tracking, and student records management.",
+      techStack: ["Java", "MySQL", "Web Technologies", "REST APIs"],
+    },
+    {
+      id: "smart-run-ai-plus",
+      number: "04",
+      name: "Smart Run AI+",
+      subtitle: "AI-Powered Sports Analytics Platform",
+      category: "Sports Tech & AI",
+      status: "Hackathon Finalist",
+      image: "/projects/smart-run-ai-plus.png",
+      githubUrl: "https://github.com/MaazArfaat",
+      summary:
+        "An AI-powered sports analytics platform built in a 48-hour sprint at Gachibowli Stadium, tracking athlete telemetry and turning raw data into performance-improving insights.",
+      techStack: ["Python", "Computer Vision", "Telemetry Analytics", "AI Models"],
+    },
+    {
+      id: "medivault",
+      number: "05",
+      name: "MediVault",
+      subtitle: "Smart Medicine Lifecycle & Management Platform",
+      category: "Healthcare Tech · Full Stack",
+      status: "Hackathon Winner",
+      image: "/projects/medivault.png",
       linkedinUrl: MEDI_VAULT_POST,
-      description:
-        "A healthcare-focused medicine management platform built for patients, hospitals, pharmacies and wholesalers — designed to make medicine workflows safer and simpler.",
-      features: [
-        "Medicine expiry-date tracking, so stock is never sold or used past its date",
-        "Automated reminder notifications for doses and renewals",
-        "Prescription management with a clean, structured workflow",
-        "Medicine categorization for easy organisation across roles",
-        "Healthcare-focused workflows tailored to each audience",
+      summary:
+        "A medicine-management project focused on medicine information, automated expiry-date tracking, dose reminders, and digital prescription workflows.",
+      techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    },
+  ],
+
+  // Verified achievements — 10 standardized entries with uniform structure
+  achievements: [
+    {
+      id: "open-build-week",
+      title: "First Prize — Open Build Week Hackathon",
+      organization: "Open Build Week · Lords Academy",
+      award: "First Prize",
+      prize: "₹15,000 Cash Award",
+      year: "2026",
+      summary:
+        "Won First Prize with a ₹15,000 cash award at the Open Build Week Hackathon at Lords Academy, recognized by technical judges for smart medicine lifecycle and automated expiry tracking.",
+      images: [
+        "/achievement-images/open-build-week/1.jpg",
+        "/achievement-images/open-build-week/2.jpg",
+        "/achievement-images/open-build-week/3.jpg",
+        "/achievement-images/open-build-week/4.jpg",
       ],
-      highlights: [
-        {
-          title: "Domain Excellence Award — Healthcare",
-          detail: "Tech Horizon 1.0, National Level Hackathon",
-        },
-        {
-          title: "International presentation",
-          detail: "Medi Vault showcased live at Hacknovate 7.0, International Hybrid Hackathon",
-        },
-        {
-          title: "Highest panel score",
-          detail: "Bower School of Entrepreneurship AI Hackathon (≈170 participating teams)",
-        },
+      captions: [
+        "Award presentation: Sanket Babde (Founder & CEO, Great Hire) presenting the Winner Trophy on stage under celebration confetti",
+        "Builders Day 2026 Winner Trophy & OpenBuild Week Participant Badge from Lords Skill Academy",
+        "Top winners on stage with HackUnion organizers holding Builders Day trophies",
+        "Builders Day winners on stage with HackUnion organizer Abdul Vasay",
       ],
     },
-    secondary: [
-      {
-        name: "Smart Run AI Plus",
-        subtitle: "AI-Powered Sports Analytics Platform",
-        description:
-          "Built in a 48-hour sports hackathon at Gachibowli Stadium. Tracks athlete performance and turns raw data into analytics-driven insights aimed at improving training and performance.",
-        achievements: ["Selected among the Top 6 projects"],
-        linkedinUrl: null,
-      },
-    ],
-    futureNote: "More builds in progress — I'll add them here as they ship.",
-  },
+    {
+      id: "tech-horizon-domain-excellence",
+      title: "Domain Excellence Award — Tech Horizon 1.0",
+      organization: "Tech Horizon 1.0 · National Level Hackathon",
+      award: "Domain Excellence (Healthcare)",
+      prize: "Domain Winner",
+      year: "2026",
+      summary:
+        "Awarded the Domain Excellence Award in Healthcare for MediVault at the Tech Horizon 1.0 National Level Hackathon, evaluated for healthcare impact and architectural execution.",
+      images: [
+        "/achievement-images/domain-excellence-healthcare/2.jpg",
+        "/achievement-images/domain-excellence-healthcare/1.jpg",
+        "/achievement-images/domain-excellence-healthcare/3.jpg",
+        "/achievement-images/domain-excellence-healthcare/4.jpg",
+      ],
+      captions: [
+        "Official Certificate of Appreciation — Domain Excellence in Healthcare (Tech Horizon 1.0)",
+        "Team receiving certificates on stage at Tech Horizon 1.0",
+        "MediVault technical presentation to IEEE-SMC panel over Google Meet",
+        "Live digital healthcare platform demonstration to judges",
+      ],
+    },
+    {
+      id: "great-hire-letter-of-recommendation",
+      title: "Letter of Recommendation — Great Hire",
+      organization: "Great Hire · Founder & CEO Recognition",
+      award: "Individual Recommendation",
+      prize: "Executive Recognition",
+      year: "2026",
+      summary:
+        "Received an individual Letter of Recommendation from Sanketh Babdhe, Founder & CEO of Great Hire, recognizing my technical competence, product thinking, ownership, problem-solving, and execution during Open Build Week.",
+      links: [
+        { label: "Sanketh Babdhe", url: "https://www.linkedin.com/in/sanket-babde-jobnskills/" },
+        { label: "Great Hire", url: "https://www.linkedin.com/company/greathire/" },
+      ],
+      images: [
+        "/achievement-images/great-hire-letter-of-recommendation/1.jpg",
+        "/achievement-images/great-hire-letter-of-recommendation/2.jpeg",
+        "/achievement-images/great-hire-letter-of-recommendation/3.jpeg",
+      ],
+      captions: [
+        "Founder & CEO of Great Hire, Sanket Babde, presenting the Letter of Recommendation",
+        "Official Letter of Recommendation — Page 1 (Merit Endorsement)",
+        "Official Letter of Recommendation — Page 2 (Signed by Sanket Babde, Founder & CEO)",
+      ],
+    },
+    {
+      id: "highest-panel-score",
+      title: "Highest Panel Score (≈170 Teams)",
+      organization: "Bower School of Entrepreneurship AI Hackathon",
+      award: "Rank 1 Evaluation",
+      prize: "Top Score",
+      year: "2026",
+      summary:
+        "Awarded the highest evaluation panel score among approximately 170 participating teams for MediVault's healthcare impact, technical architecture, and live defense.",
+      images: [
+        "/achievement-images/highest-panel-score-ai-hackathon/1.jpg",
+        "/achievement-images/highest-panel-score-ai-hackathon/2.jpg",
+        "/achievement-images/highest-panel-score-ai-hackathon/3.jpg",
+        "/achievement-images/highest-panel-score-ai-hackathon/4.jpg",
+      ],
+      captions: [
+        "Bower School of Entrepreneurship AI Hackathon stage presentation",
+        "Official Rank 1 Evaluation certificate",
+        "Healthcare platform defense before technical panel",
+        "Certificate of achievement",
+      ],
+    },
+    {
+      id: "sports-hackathon-finalist",
+      title: "Top 6 Finalist — Sports Hackathon",
+      organization: "48-Hour Sports Hackathon · Gachibowli Stadium",
+      award: "Top 6 Project",
+      prize: "Finalist",
+      year: "2026",
+      summary:
+        "Built Smart Run AI+ in an intensive 48-hour sprint at Gachibowli Stadium, tracking athlete telemetry and selected among the top 6 projects.",
+      images: [
+        "/achievement-images/top-6-sports-hackathon/1.jpg",
+        "/achievement-images/top-6-sports-hackathon/2.jpg",
+        "/achievement-images/top-6-sports-hackathon/3.jpg",
+        "/achievement-images/top-6-sports-hackathon/4.jpg",
+      ],
+      captions: [
+        "48-hour sprint development floor at Gachibowli Stadium",
+        "Athlete telemetry demonstration",
+        "Judges evaluation and finalist selection",
+        "Top 6 Finalist certificate of achievement",
+      ],
+    },
+    {
+      id: "google-student-ambassador",
+      title: "Google Student Ambassador 2026",
+      organization: "Google",
+      award: "Campus Ambassador",
+      prize: "Google Ambassador",
+      year: "2026",
+      summary:
+        "Selected for Google's Student Ambassador Program; representing Google Gemini, organizing campus developer workshops, and leading student tech initiatives.",
+      images: [
+        "/achievement-images/google-student-ambassador/1.jpg",
+        "/achievement-images/google-student-ambassador/2.jpg",
+      ],
+      captions: [
+        "Google Student Ambassador official onboarding badge",
+        "Google Gemini campus developer workshop session",
+      ],
+    },
+    {
+      id: "ieee-nano-chemistry",
+      title: "IEEE Nano Chemistry — 1st Prize",
+      organization: "IEEE · PPT Presentation Competition",
+      award: "1st Prize Winner",
+      prize: "1st Prize",
+      year: "2026",
+      summary:
+        "Awarded First Prize in technical research presentation on Nano Chemistry engineering applications under IEEE.",
+      images: [
+        "/achievement-images/ieee-nano-chemistry-1st-prize/1.jpg",
+        "/achievement-images/ieee-nano-chemistry-1st-prize/2.jpg",
+        "/achievement-images/ieee-nano-chemistry-1st-prize/3.jpg",
+      ],
+      captions: [
+        "IEEE technical research presentation session",
+        "Official 1st Prize Certificate awarded under IEEE",
+        "Award ceremony photograph",
+      ],
+    },
+    {
+      id: "ieee-international-conference",
+      title: "IEEE International Conference — 2nd Prize",
+      organization: "IEEE International Conference",
+      award: "2nd Prize Winner",
+      prize: "2nd Prize",
+      year: "2026",
+      summary:
+        "Secured Second Prize in the technical poster presentation competition at the IEEE International Conference.",
+      images: [
+        "/achievement-images/ieee-international-conference-2nd-prize/1.jpg",
+        "/achievement-images/ieee-international-conference-2nd-prize/2.jpg",
+        "/achievement-images/ieee-international-conference-2nd-prize/3.jpg",
+      ],
+      captions: [
+        "IEEE International Conference poster session defense",
+        "Official 2nd Prize Winner certificate",
+        "Conference award ceremony",
+      ],
+    },
+    {
+      id: "national-maths-day",
+      title: "National Mathematics Day — 2nd Prize",
+      organization: "National Mathematics Day",
+      award: "2nd Prize Winner",
+      prize: "2nd Prize",
+      year: "2026",
+      summary:
+        "Won Second Prize in the technical presentation competition commemorating National Mathematics Day.",
+      images: [
+        "/achievement-images/national-mathematics-day-2nd-prize/1.jpg",
+        "/achievement-images/national-mathematics-day-2nd-prize/2.jpg",
+        "/achievement-images/national-mathematics-day-2nd-prize/3.jpg",
+        "/achievement-images/national-mathematics-day-2nd-prize/4.jpg",
+      ],
+      captions: [
+        "Mathematics Day technical presentation session",
+        "Official 2nd Prize Certificate",
+        "Evaluation panel review",
+        "Award presentation",
+      ],
+    },
+    {
+      id: "advertisement-competition",
+      title: "Advertisement Competition — 2nd Prize",
+      organization: "Campus Technical Fest",
+      award: "2nd Prize Winner",
+      prize: "2nd Prize",
+      year: "2026",
+      summary:
+        "Won Second Prize in creative technical campaign strategy and product positioning.",
+      images: [
+        "/achievement-images/advertisement-competition-2nd-prize/1.jpg",
+      ],
+      captions: [
+        "Technical advertising and campaign strategy certificate",
+      ],
+    },
+  ],
 
-  achievements: {
-    flagship: [
-      {
-        title: "Google Student Ambassador 2026",
-        detail:
-          "Selected for Google's Student Ambassador Program; involved with Google Gemini and community initiatives.",
-        year: "2026",
-        linkedinUrl: null,
-      },
-      {
-        title: "Domain Excellence Award — Healthcare",
-        detail:
-          "Tech Horizon 1.0, National Level Hackathon · for Medi Vault",
-        year: "2026",
-        linkedinUrl: MEDI_VAULT_POST,
-      },
-      {
-        title: "Highest Panel Score",
-        detail:
-          "Bower School of Entrepreneurship AI Hackathon · for Medi Vault",
-        year: "2026",
-        linkedinUrl: MEDI_VAULT_POST,
-      },
-      {
-        title: "Top 6 Finalist",
-        detail: "48-hour Sports Hackathon, Gachibowli Stadium · for Smart Run AI Plus",
-        year: "2026",
-        linkedinUrl: null,
-      },
-    ],
-    competitions: [
-      { rank: "1st Prize", title: "IEEE Nano Chemistry — PPT Presentation Competition", year: "2026" },
-      { rank: "2nd Prize", title: "IEEE International Conference — Poster Presentation Competition", year: "2026" },
-      { rank: "2nd Prize", title: "National Mathematics Day — Poster Presentation Competition", year: "2026" },
-      { rank: "2nd Prize", title: "Advertisement Promotion Competition", year: "2026" },
-    ],
-    note: [
-      "Presented Medi Vault at Hacknovate 7.0, an international hybrid hackathon.",
-      "Cleared the technical interview process for a 3-month AI Annotation internship at TAO Digital — selected, but declined on-site placement due to academic commitments.",
-    ],
-  },
-
+  // Technical Training, Offers & Student Leadership (including Google Ambassador)
   experience: [
+    {
+      role: "Google Student Ambassador 2026",
+      org: "Google",
+      period: "2026 — Present",
+      type: "Ambassadorship",
+      points: [
+        "Selected for Google's Student Ambassador Program; representing Google Gemini and ecosystem developer tools across campus.",
+        "Organizing technical workshops, hackathon mentoring circles, and AI-focused student initiatives.",
+      ],
+    },
     {
       role: "Generative AI & Cloud Computing Trainee",
       org: "IBM SkillsBuild × Bharat Cares × AICTE",
-      period: "June – July 2026 · 6 weeks",
-      year: "2026",
-      type: "Completed internship",
-      linkedinUrl: null,
+      period: "June – July 2026",
+      type: "Technical Training",
       points: [
-        "Completed a structured 6-week internship program.",
-        "Gained hands-on exposure to Generative AI concepts and Cloud Computing fundamentals.",
-        "Built working knowledge of how modern AI and cloud systems power real products.",
+        "Completed a 6-week curriculum on Generative AI foundation models, prompt engineering, and cloud infrastructure.",
+        "Engineered and deployed AI microservices connected to modern web user interfaces.",
       ],
     },
     {
       role: "AI Annotation Internship — Selected",
       org: "TAO Digital",
-      period: "3-month on-site · Offered · ₹10,000/month stipend",
-      year: "2026",
-      type: "Selection",
-      linkedinUrl: null,
+      period: "Offered · ₹10k/month Stipend",
+      type: "Technical Selection",
       points: [
-        "Cleared the technical interview process for a 3-month, on-site AI Annotation internship.",
-        "Selected as an intern — not taken up because the on-site schedule conflicted with my academic commitments.",
+        "Cleared competitive technical interviews for an on-site AI annotation role; declined to focus on core B.Tech academics.",
       ],
-      statusNote:
-        "I cleared the selection process but declined the on-site placement to protect my academic year.",
+    },
+    {
+      role: "Class Representative",
+      org: "Vardhaman College of Engineering",
+      period: "2024 — Present",
+      type: "Campus Leadership",
+      points: [
+        "Serving as Class Representative, coordinating class communication, sharing faculty updates, and helping address student concerns.",
+      ],
     },
   ],
 
-  community: {
-    heading: "Always learning beyond the classroom.",
-    blurb:
-      "Hackathons, meetups and builder weeks are where I sharpen what lectures only introduce. A snapshot of the ecosystem I show up to:",
-    events: [
-      {
-        name: "Cafe Compute 2026",
-        place: "Hyderabad",
-        focus: ["AI", "Generative AI", "LLMs", "High-performance computing"],
-        note: "Connected with developers and technology enthusiasts over hands-on talks.",
-        linkedinUrl: null,
-      },
-      {
-        name: "OpenBuild Week 2026",
-        place: "HackUnion × Interledger × GitHub Education",
-        focus: ["Builder Challenge", "Open source", "Collaboration"],
-        note: 'Worked with teammates on "TestQ" — an idea for identifying issues in AI-generated apps while minimising unwanted UI/UX changes. Shared feedback on stage.',
-        linkedinUrl: null,
-      },
-      {
-        name: "StackFlow 2.0",
-        place: "Hyderabad",
-        focus: ["Agentic AI", "AI Security", "Cloud Security", "DevOps", "Observability"],
-        note: "A deep-dive event exploring the modern AI + cloud engineering stack.",
-        linkedinUrl: null,
-      },
-      {
-        name: "Global Fabric Days 2026",
-        place: "Microsoft Campus, Hyderabad",
-        focus: ["Microsoft Fabric", "Power BI", "Azure AI", "Data Engineering", "Enterprise Analytics"],
-        note: "Immersed in Microsoft's data platform and enterprise analytics ecosystem.",
-        linkedinUrl: null,
-      },
-      {
-        name: "IgniteHQ",
-        place: "Microsoft Hyderabad",
-        focus: ["Leadership", "Communication", "Confidence", "Personal branding"],
-        note: "Learned from professionals about presence and growth — and their lived experience.",
-        linkedinUrl: null,
-      },
-      {
-        name: "Team1 India Speedrun",
-        place: "DraperU India",
-        focus: ["Avalanche", "Web3", "Blockchain", "Community-driven innovation"],
-        note: "Explored where decentralised tech meets community-driven building.",
-        linkedinUrl: null,
-      },
-    ],
-  },
-
-  skills: {
-    byGroup: [
-      {
-        label: "Programming",
-        items: ["C", "Java", "Python", "HTML", "CSS"],
-      },
-      {
-        label: "Computer Science",
-        items: ["Data Structures", "Algorithms", "DBMS", "Operating Systems"],
-      },
-      {
-        label: "Web",
-        items: ["React", "HTML", "CSS"],
-      },
-      {
-        label: "AI",
-        items: ["Artificial Intelligence", "Generative AI", "Cloud Computing"],
-      },
-      {
-        label: "Tools",
-        items: ["Git", "GitHub", "VS Code"],
-      },
-    ],
-    note: "Honest rather than inflated — a growing list, not finished competencies.",
-  },
-
-  certifications: [
-    {
-      title: "Programming Using Java",
-      org: "Infosys Springboard",
-      tag: "Certification",
-      linkedinUrl: null,
-    },
-    {
-      title: "Copado AI / Salesforce DevOps",
-      org: "Copado Certified",
-      tag: "Professional credential",
-      linkedinUrl: null,
-    },
-    {
-      title: "AI Skills Fest 2026",
-      org: "Microsoft",
-      tag: "Badge",
-      linkedinUrl: null,
-    },
+  // Technologies for the horizontal scrolling marquee
+  technologies: [
+    { name: "Java", category: "Language" },
+    { name: "Python", category: "Language" },
+    { name: "JavaScript", category: "Language" },
+    { name: "C", category: "Language" },
+    { name: "React", category: "Frontend" },
+    { name: "Vite", category: "Build Tool" },
+    { name: "Tailwind CSS", category: "Styling" },
+    { name: "Node.js", category: "Backend" },
+    { name: "Express", category: "Backend" },
+    { name: "FastAPI", category: "Backend" },
+    { name: "JSP & Servlets", category: "Enterprise" },
+    { name: "MySQL", category: "Database" },
+    { name: "PostgreSQL", category: "Database" },
+    { name: "MongoDB", category: "Database" },
+    { name: "PyTorch", category: "AI / ML" },
+    { name: "OpenCV", category: "Computer Vision" },
+    { name: "Git", category: "DevOps" },
+    { name: "GitHub", category: "DevOps" },
+    { name: "Maven", category: "Build Tool" },
+    { name: "Apache Tomcat", category: "Server" },
   ],
 
   contact: {
-    heading: "Let's build something.",
+    heading: "Let's build something enduring.",
     intro:
-      "Whether it's a hackathon team, an interesting project, or just a conversation about AI and building — my inbox is open.",
-    cta: "Say hello",
-    availability: "Currently open to hackathon teams, internships and build collaborations.",
+      "Available for summer engineering internships, hackathons, and software collaborations. My inbox is always open.",
+    cta: "Send an Email",
+    availability: "Available for Internships & Hackathons",
   },
 
   nav: [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Achievements", href: "#achievements" },
-    { label: "Experience", href: "#experience" },
-    { label: "Community", href: "#community" },
+    { label: "Leadership", href: "#experience" },
+    { label: "Stack", href: "#skills" },
     { label: "Contact", href: "#contact" },
   ],
 };
