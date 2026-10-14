@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <a
             href={`mailto:${profile.links.email}`}
-            aria-label="Email"
+            aria-label="Send email to Mohammed Maaz Arfaat"
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white text-[#575550] transition-colors hover:text-[#15181E] hover:border-[#15181E]"
           >
             <Mail className="h-3.5 w-3.5" />
@@ -34,7 +34,7 @@ export default function Footer() {
             href={profile.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
+            aria-label="Mohammed Maaz Arfaat on GitHub"
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white text-[#575550] transition-colors hover:text-[#15181E] hover:border-[#15181E]"
           >
             <GithubIcon className="h-3.5 w-3.5" />
@@ -43,7 +43,7 @@ export default function Footer() {
             href={profile.links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            aria-label="Mohammed Maaz Arfaat on LinkedIn"
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white text-[#575550] transition-colors hover:text-[#15181E] hover:border-[#15181E]"
           >
             <LinkedinIcon className="h-3.5 w-3.5" />

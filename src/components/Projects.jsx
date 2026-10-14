@@ -397,6 +397,7 @@ export default function Projects() {
                           href={activeProject.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`View ${activeProject.name} repository on GitHub`}
                           className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-[#202020] text-white text-xs sm:text-sm font-bold shadow-sm hover:bg-[#8B5E3C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5E3C] transition-colors"
                         >
                           <Code2 className="w-3.5 h-3.5 text-[#8B5E3C]" />
@@ -409,6 +410,7 @@ export default function Projects() {
                           href={activeProject.linkedinUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`View ${activeProject.name} award post on LinkedIn`}
                           className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-[#8B5E3C] text-white text-xs sm:text-sm font-bold shadow-sm hover:bg-[#6F492E] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5E3C] transition-colors"
                         >
                           <Trophy className="w-3.5 h-3.5 text-amber-200" />

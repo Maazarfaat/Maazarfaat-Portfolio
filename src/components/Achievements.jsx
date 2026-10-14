@@ -231,9 +231,9 @@ export default function Achievements() {
                     </div>
 
                     {/* Title with consistent clamped height */}
-                    <h4 className="font-display text-sm sm:text-[0.95rem] font-bold text-[#202020] tracking-tight group-hover:text-[#8B5E3C] transition-colors line-clamp-2 min-h-[2.4rem] leading-snug">
+                    <h3 className="font-display text-sm sm:text-[0.95rem] font-bold text-[#202020] tracking-tight group-hover:text-[#8B5E3C] transition-colors line-clamp-2 min-h-[2.4rem] leading-snug">
                       {item.title}
-                    </h4>
+                    </h3>
 
                     {/* Description with consistent clamped height */}
                     <p className="mt-1 text-xs sm:text-[0.8rem] text-[#575550] leading-relaxed line-clamp-2 sm:line-clamp-3 min-h-[2.5rem]">

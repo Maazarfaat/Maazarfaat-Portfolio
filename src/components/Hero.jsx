@@ -66,10 +66,10 @@ export default function Hero() {
               01 / {profile.hero.eyebrow || "PORTFOLIO · 2026"}
             </span>
 
-            <h2 className="font-display font-black text-[clamp(2.1rem,4.1vw,4.25rem)] uppercase tracking-[-0.035em] text-[#202020] leading-[0.92] mt-1 sm:mt-2">
+            <p role="doc-subtitle" className="font-display font-black text-[clamp(2.1rem,4.1vw,4.25rem)] uppercase tracking-[-0.035em] text-[#202020] leading-[0.92] mt-1 sm:mt-2">
               <span className="block">SOFTWARE</span>
               <span className="block">DEVELOPER</span>
-            </h2>
+            </p>
 
             {/* Relevant technology tags beneath heading */}
             <div className="mt-3.5 sm:mt-4 flex flex-wrap gap-2">
