@@ -4,6 +4,7 @@
   --font-display: "Syne", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", "Georgia", "Cambria", serif;
 
   /* ------------------------------------------------------------------ */
   /*  Warm Ivory & Editorial Light Design Tokens                         */
@@ -51,6 +52,11 @@
   --color-dark-card: #FFFFFF;
   --color-dark-line: #D9D6CF;
   --color-paper: #15181E;
+
+  /* Section Spacing Vertical Rhythm (Substantial Editorial Spacing) */
+  --spacing-section-desktop: 13rem; /* 208px: within 180-240px range */
+  --spacing-section-tablet: 9rem;   /* 144px: within 130-180px range */
+  --spacing-section-mobile: 6rem;   /* 96px: within 90-130px range */
 }
 
 @layer base {
@@ -185,6 +191,202 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bookPageNext {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bookPagePrev {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================================================== */
+/* REALISTIC PHYSICAL 3D PAGE TURN ANIMATIONS                                 */
+/* ========================================================================== */
+
+@keyframes pageTurnNext {
+  0% {
+    transform: perspective(2200px) rotateY(0deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  }
+  35% {
+    transform: perspective(2200px) rotateY(-65deg) scaleY(1.015);
+    filter: drop-shadow(-8px 12px 18px rgba(25, 20, 15, 0.22));
+  }
+  65% {
+    transform: perspective(2200px) rotateY(-125deg) scaleY(1.015);
+    filter: drop-shadow(8px 12px 18px rgba(25, 20, 15, 0.22));
+  }
+  100% {
+    transform: perspective(2200px) rotateY(-180deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  }
+}
+
+@keyframes pageTurnPrev {
+  0% {
+    transform: perspective(2200px) rotateY(0deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  }
+  35% {
+    transform: perspective(2200px) rotateY(65deg) scaleY(1.015);
+    filter: drop-shadow(8px 12px 18px rgba(25, 20, 15, 0.22));
+  }
+  65% {
+    transform: perspective(2200px) rotateY(125deg) scaleY(1.015);
+    filter: drop-shadow(-8px 12px 18px rgba(25, 20, 15, 0.22));
+  }
+  100% {
+    transform: perspective(2200px) rotateY(180deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  }
+}
+
+@keyframes leafShadowFront {
+  0% { opacity: 0; }
+  50% { opacity: 0.35; }
+  100% { opacity: 0.65; }
+}
+
+@keyframes leafShadowBack {
+  0% { opacity: 0.65; }
+  50% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+@keyframes paperSheenNext {
+  0% {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0) 40%, transparent 100%);
+  }
+  45% {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.12) 75%, transparent 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0) 80%, transparent 100%);
+  }
+}
+
+@keyframes paperSheenPrev {
+  0% {
+    background: linear-gradient(270deg, transparent 0%, rgba(255,255,255,0) 40%, transparent 100%);
+  }
+  45% {
+    background: linear-gradient(270deg, transparent 0%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0.12) 75%, transparent 100%);
+  }
+  100% {
+    background: linear-gradient(270deg, transparent 0%, rgba(255,255,255,0) 80%, transparent 100%);
+  }
+}
+
+@keyframes castShadowFade {
+  0% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+@keyframes castShadowAppear {
+  0% { opacity: 0; }
+  100% { opacity: 0.35; }
+}
+
+@keyframes mobilePageFadeNext {
+  0% { opacity: 0.4; transform: translateX(14px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes mobilePageFadePrev {
+  0% { opacity: 0.4; transform: translateX(-14px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-page-turn-next {
+  animation: pageTurnNext 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-page-turn-prev {
+  animation: pageTurnPrev 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-leaf-shadow-front {
+  animation: leafShadowFront 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-leaf-shadow-back {
+  animation: leafShadowBack 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-paper-sheen-next {
+  animation: paperSheenNext 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-paper-sheen-prev {
+  animation: paperSheenPrev 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-cast-shadow-fade {
+  animation: castShadowFade 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-cast-shadow-appear {
+  animation: castShadowAppear 300ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animate-mobile-page-next {
+  animation: mobilePageFadeNext 200ms ease-out forwards;
+}
+
+.animate-mobile-page-prev {
+  animation: mobilePageFadePrev 200ms ease-out forwards;
+}
+
+/* ========================================================================== */
+/* DIARY COVER UNLOCK & 3D OPENING ANIMATION                                  */
+/* ========================================================================== */
+
+@keyframes diaryCoverOpen {
+  0% {
+    transform: perspective(2400px) rotateY(0deg);
+    box-shadow: 0 25px 60px -15px rgba(15, 10, 5, 0.5), 0 12px 24px rgba(0, 0, 0, 0.35);
+  }
+  30% {
+    transform: perspective(2400px) rotateY(-35deg);
+    box-shadow: -15px 30px 70px -10px rgba(15, 10, 5, 0.6), 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  75% {
+    transform: perspective(2400px) rotateY(-115deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(2400px) rotateY(-180deg);
+    opacity: 0;
+  }
+}
+
+.animate-diary-cover-open {
+  animation: diaryCoverOpen 720ms cubic-bezier(0.35, 0, 0.25, 1) forwards;
+  transform-origin: left center;
+}
+
+.animate-page-next {
+  animation: bookPageNext 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-page-prev {
+  animation: bookPagePrev 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes heroEntrance {

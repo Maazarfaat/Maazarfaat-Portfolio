@@ -161,8 +161,8 @@ export default function Projects() {
       ref={containerRef}
       className={`relative w-full bg-[#F7F5EF] text-[#202020] ${
         prefersReducedMotion
-          ? "py-24 sm:py-28 lg:py-32"
-          : "lg:h-[260vh] py-24 sm:py-28 lg:py-0"
+          ? "py-24 sm:py-36 lg:py-52"
+          : "lg:h-[260vh] py-24 sm:py-36 lg:py-0"
       }`}
     >
       {/* Sticky showcase viewport on desktop; natural stack on mobile */}

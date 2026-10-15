@@ -54,7 +54,7 @@ export default function Skills() {
   return (
     <Section
       id="skills"
-      pyClassName="py-24 sm:py-36 lg:py-48"
+      pyClassName="py-24 sm:py-36 lg:py-52"
       className="relative overflow-hidden bg-[#F7F5EF] border-t border-[#E5E2DA]"
     >
       <SectionHeading

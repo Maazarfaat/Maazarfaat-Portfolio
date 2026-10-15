@@ -96,7 +96,7 @@ export default function ScrollTypography() {
     <section
       ref={sectionRef}
       aria-label="Core Engineering Domains"
-      className="relative w-full overflow-hidden bg-[#EEEAE2] pt-32 sm:pt-44 lg:pt-56 pb-36 sm:pb-52 lg:pb-64 select-none border-y border-[#D9D6CF]"
+      className="relative w-full overflow-hidden bg-[#EEEAE2] py-24 sm:py-36 lg:py-52 select-none border-y border-[#D9D6CF]"
     >
       {/* Subtle edge gradient masks matching the #EEEAE2 background */}
       <div
@@ -109,7 +109,7 @@ export default function ScrollTypography() {
       />
 
       {/* Small Editorial Section Header */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 mb-8 sm:mb-12 lg:mb-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-14 mb-10 sm:mb-14 lg:mb-18">
         <div className="flex items-center gap-3">
           <span className="h-0.5 w-6 bg-[#8B5E3C]" />
           <span className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-[#8B5E3C]">

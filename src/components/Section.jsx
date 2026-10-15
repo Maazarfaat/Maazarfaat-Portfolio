@@ -9,7 +9,7 @@ export function Section({
   children,
   className = "",
   containerClassName = "max-w-[1440px]",
-  pyClassName = "py-24 sm:py-36 lg:py-48",
+  pyClassName = "py-24 sm:py-36 lg:py-52",
 }) {
   return (
     <section
@@ -30,7 +30,7 @@ export function SectionHeading({ eyebrow, title, lede, align = "left" }) {
   const alignment =
     align === "center" ? "items-center text-center" : "items-start text-left";
   return (
-    <Reveal className={`flex flex-col gap-3.5 ${alignment} mb-12 sm:mb-16 lg:mb-20`}>
+    <Reveal className={`flex flex-col gap-3.5 ${alignment} mb-14 sm:mb-18 lg:mb-24`}>
       <span className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-bold uppercase tracking-[0.24em] text-[#8B5E3C] font-mono">
         <span className="h-0.5 w-6 bg-[#8B5E3C]" />
         {eyebrow}

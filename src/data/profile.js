@@ -127,7 +127,7 @@ export const profile = {
       prize: "₹15,000 Cash Award",
       year: "2026",
       summary:
-        "Won First Prize with a ₹15,000 cash award at the Open Build Week Hackathon at Lords Academy, recognized by technical judges for smart medicine lifecycle and automated expiry tracking.",
+        "Won First Prize with a ₹15,000 cash award at the Open Build Week Hackathon at Lords Academy for TESTQ, recognized by technical judges during the final project evaluation.",
       images: [
         "/achievement-images/open-build-week/1.jpg",
         "/achievement-images/open-build-week/2.jpg",

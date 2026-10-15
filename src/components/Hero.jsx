@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] sm:min-h-screen w-full bg-[#F7F5EF] text-[#202020] flex flex-col justify-between px-5 sm:px-8 lg:px-14 pt-24 sm:pt-28 pb-20 sm:pb-28 lg:pb-36 overflow-hidden"
+      className="relative min-h-[92vh] sm:min-h-screen w-full bg-[#F7F5EF] text-[#202020] flex flex-col justify-between px-5 sm:px-8 lg:px-14 pt-24 sm:pt-28 pb-24 sm:pb-36 lg:pb-52 overflow-hidden"
     >
       {/* Subtle Editorial Background Grid */}
       <div

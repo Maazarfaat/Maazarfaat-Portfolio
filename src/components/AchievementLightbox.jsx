@@ -119,13 +119,18 @@ export default function AchievementLightbox({ achievement, initialIndex = 0, onC
         )}
 
         {/* The Active Image */}
-        <div className="relative max-h-[72vh] max-w-full flex items-center justify-center">
+        <div className="relative max-h-[68vh] max-w-full flex flex-col items-center justify-center">
           <img
             key={images[currentIndex]}
             src={images[currentIndex]}
             alt={`${achievement.title} — photo ${currentIndex + 1} of ${total}`}
-            className="max-h-[72vh] max-w-full w-auto h-auto object-contain rounded-xl shadow-2xl border border-white/10 transition-opacity duration-300"
+            className="max-h-[64vh] max-w-full w-auto h-auto object-contain rounded-xl shadow-2xl border border-white/10 transition-opacity duration-300"
           />
+          {achievement.captions && achievement.captions[currentIndex] && (
+            <p className="mt-2.5 px-4 py-1.5 rounded-lg bg-black/60 backdrop-blur-md text-xs sm:text-sm text-stone-200 text-center max-w-2xl font-sans">
+              {achievement.captions[currentIndex]}
+            </p>
+          )}
         </div>
 
         {/* Next Button */}
@@ -143,14 +148,19 @@ export default function AchievementLightbox({ achievement, initialIndex = 0, onC
 
       {/* Bottom Bar: Thumbnails, Counter & Meta */}
       <div className="w-full max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-white/10">
-        <div className="flex items-center gap-2 text-xs text-stone-300 font-mono">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-stone-300 font-mono">
           <ImageIcon className="w-4 h-4 text-stone-400" />
           <span>
             Proof {currentIndex + 1} of {total}
           </span>
-          {achievement.badge && (
-            <span className="ml-2 px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-white font-sans font-semibold">
-              {achievement.badge}
+          {achievement.award && (
+            <span className="px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-white font-sans font-semibold">
+              {achievement.award}
+            </span>
+          )}
+          {achievement.prize && achievement.prize !== achievement.award && (
+            <span className="px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 font-mono">
+              {achievement.prize}
             </span>
           )}
         </div>
