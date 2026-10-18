@@ -14,6 +14,7 @@ export default function Navbar() {
       // Section spy
       const sections = [
         "home",
+        "about",
         "projects",
         "achievements",
         "experience",

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import ScrollTypography from "./components/ScrollTypography.jsx";
+import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
 import Experience from "./components/Experience.jsx";
@@ -23,6 +24,7 @@ export default function App() {
       <main id="main-content" className="w-full">
         <Hero />
         <ScrollTypography />
+        <About />
         <Projects />
         <Achievements />
         <Experience />

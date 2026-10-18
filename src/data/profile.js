@@ -405,6 +405,7 @@ export const profile = {
 
   nav: [
     { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Achievements", href: "#achievements" },
     { label: "Leadership", href: "#experience" },

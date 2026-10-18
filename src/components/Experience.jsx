@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <Section
       id="experience"
-      pyClassName="py-24 sm:py-36 lg:py-52"
+      pyClassName="py-20 sm:py-28 lg:py-36"
       className="relative bg-[#F7F5EF] border-t border-[#D9D6CF]"
     >
       <SectionHeading

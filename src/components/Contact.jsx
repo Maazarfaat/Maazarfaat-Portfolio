@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      pyClassName="py-24 sm:py-36 lg:py-52"
+      pyClassName="py-20 sm:py-28 lg:py-36"
       className="relative bg-[#FAF6F0] border-t border-[#D9D6CF] overflow-hidden"
     >
       <Reveal>

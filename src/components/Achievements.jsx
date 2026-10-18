@@ -444,7 +444,7 @@ export default function Achievements() {
   return (
     <Section
       id="achievements"
-      pyClassName="py-24 sm:py-36 lg:py-52"
+      pyClassName="py-20 sm:py-28 lg:py-36"
       className="relative overflow-hidden border-t border-[#E5E2DA]"
     >
       {/* SECTION HEADER */}

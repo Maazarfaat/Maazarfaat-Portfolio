@@ -96,7 +96,7 @@ export default function ScrollTypography() {
     <section
       ref={sectionRef}
       aria-label="Core Engineering Domains"
-      className="relative w-full overflow-hidden bg-[#EEEAE2] py-24 sm:py-36 lg:py-52 select-none border-y border-[#D9D6CF]"
+      className="relative w-full overflow-hidden bg-[#EEEAE2] py-20 sm:py-28 lg:py-36 select-none border-y border-[#D9D6CF]"
     >
       {/* Subtle edge gradient masks matching the #EEEAE2 background */}
       <div
